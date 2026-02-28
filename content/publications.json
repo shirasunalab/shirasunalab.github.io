@@ -1,0 +1,13 @@
+[
+  {
+    "year": 2024,
+    "type": "journal",
+    "title": "早押しクイズに見る不確実性下の判断：クイズ大会の行動データに基づく事例研究",
+    "authors": "白砂大, 小坂健太",
+    "venue": "認知科学, 31(2), 352-361",
+    "doi": "https://doi.org/10.11225/cs.2024.004",
+    "url": null,
+    "pdf": null,
+    "bibtex": "@article{shirasuna2024quiz,\n  title={早押しクイズに見る不確実性下の判断},\n  author={白砂大 and 小坂健太},\n  journal={認知科学},\n  volume={31},\n  number={2},\n  pages={352--361},\n  year={2024}\n}"
+  }
+]

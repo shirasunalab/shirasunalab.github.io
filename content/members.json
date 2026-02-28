@@ -1,0 +1,28 @@
+[
+  {
+    "name": "白砂 大",
+    "nameEn": "Masaru Shirasuna",
+    "roleCategory": "PI",
+    "title": "講師 / Junior Associate Professor",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2024,
+    "interests": ["ヒューリスティック", "不確実性下の判断", "限定合理性", "生態学的合理性", "資源合理性", "集合知", "ナッジ・ブースト"],
+    "email": "m.shirasuna1392[AT]gmail.com",
+    "website": "https://sites.google.com/view/masaru-shirasuna",
+    "photo": null,
+    "bio": "認知科学、特に意思決定科学を専門とし、行動実験・認知モデリング・計算機シミュレーションなどのアプローチから「人の知性」の本質を解明することを目指しています。東京大学大学院博士課程修了。博士（学術）。"
+  },
+  {
+    "name": "奈須 大輝",
+    "nameEn": "Kohei Shimbori",
+    "roleCategory": "Student",
+    "title": "B3",
+    "affiliation": "静岡大学 情報学部 情報社会学科",
+    "year": 2025,
+    "interests": ["不確実化における", "歌詞分析・生成システム開発"],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  }
+]
