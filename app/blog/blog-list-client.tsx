@@ -3,27 +3,27 @@
 import { useState, useMemo } from "react"
 import { Search } from "lucide-react"
 import type { LabActivityItem } from "@/lib/types"
-import { LabActivityCard } from "@/components/sections/lab-activity-card"
+import { BlogCard } from "@/components/sections/blog-card"
 
-export function LabActivityListClient({ activities }: { activities: LabActivityItem[] }) {
+export function BlogListClient({ posts }: { posts: LabActivityItem[] }) {
   const [query, setQuery] = useState("")
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [selectedYear, setSelectedYear] = useState<string | null>(null)
 
   const allTags = useMemo(() => {
     const tags = new Set<string>()
-    activities.forEach((n) => n.tags.forEach((t) => tags.add(t)))
+    posts.forEach((n) => n.tags.forEach((t) => tags.add(t)))
     return Array.from(tags).sort()
-  }, [activities])
+  }, [posts])
 
   const allYears = useMemo(() => {
     const years = new Set<string>()
-    activities.forEach((n) => years.add(n.date.slice(0, 4)))
+    posts.forEach((n) => years.add(n.date.slice(0, 4)))
     return Array.from(years).sort().reverse()
-  }, [activities])
+  }, [posts])
 
   const filtered = useMemo(() => {
-    return activities.filter((n) => {
+    return posts.filter((n) => {
       if (query && !n.title.toLowerCase().includes(query.toLowerCase()) && !n.summary.toLowerCase().includes(query.toLowerCase())) {
         return false
       }
@@ -31,7 +31,7 @@ export function LabActivityListClient({ activities }: { activities: LabActivityI
       if (selectedYear && !n.date.startsWith(selectedYear)) return false
       return true
     })
-  }, [activities, query, selectedTag, selectedYear])
+  }, [posts, query, selectedTag, selectedYear])
 
   return (
     <div className="mt-8">
@@ -41,7 +41,7 @@ export function LabActivityListClient({ activities }: { activities: LabActivityI
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
             type="text"
-            placeholder="Search activities..."
+            placeholder="Search blog..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full rounded-md border border-input bg-background py-2 pl-9 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
@@ -80,13 +80,13 @@ export function LabActivityListClient({ activities }: { activities: LabActivityI
       {/* Results */}
       <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((item) => (
-          <LabActivityCard key={item.slug} item={item} />
+          <BlogCard key={item.slug} item={item} />
         ))}
       </div>
 
       {filtered.length === 0 && (
         <p className="mt-12 text-center text-sm text-muted-foreground">
-          該当する活動が見つかりません。
+          該当する記事が見つかりません。
         </p>
       )}
     </div>

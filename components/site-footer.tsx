@@ -23,7 +23,7 @@ export function SiteFooter() {
                 { href: "/news", label: "News" },
                 { href: "/research", label: "Research" },
                 { href: "/members", label: "Members" },
-                { href: "/publications", label: "Publications" },
+                { href: "https://sites.google.com/view/masaru-shirasuna/home/publications-works?authuser=0", label: "Publications" },
                 { href: "/join", label: "Join Us" },
                 { href: "/access", label: "Access" },
               ].map((link) => (
@@ -49,7 +49,7 @@ export function SiteFooter() {
               〒432-8011<br />
               静岡県浜松市中央区城北3-5-1<br />
               静岡大学 浜松キャンパス <br />
-              情報学部2号館4階　J2432（教員室）J2433（学生室）<br />
+              情報学部2号館4階<br />
             </p>
           </div>
         </div>

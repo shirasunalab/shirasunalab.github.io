@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, Calendar, ExternalLink } from "lucide-react"
-import { getLabActivities, getLabActivityBySlug } from "@/lib/content"
+import { getBlogPosts, getBlogPostBySlug } from "@/lib/content"
 import type { Metadata } from "next"
 
 export async function generateStaticParams() {
-  const activities = getLabActivities()
-  return activities.map((n) => ({ slug: n.slug }))
+  const posts = getBlogPosts()
+  return posts.map((n) => ({ slug: n.slug }))
 }
 
 export async function generateMetadata({
@@ -15,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const item = getLabActivityBySlug(slug)
+  const item = getBlogPostBySlug(slug)
   if (!item) return {}
   return {
     title: item.title,
@@ -23,22 +23,22 @@ export async function generateMetadata({
   }
 }
 
-export default async function LabActivityDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const item = getLabActivityBySlug(slug)
+  const item = getBlogPostBySlug(slug)
   if (!item) notFound()
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 lg:px-6">
       <Link
-        href="/lab-activity"
+        href="/blog"
         className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
       >
-        <ArrowLeft className="h-4 w-4" /> Back to Lab Activity
+        <ArrowLeft className="h-4 w-4" /> Back to Blog
       </Link>
 
       <article className="mt-8">

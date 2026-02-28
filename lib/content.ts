@@ -4,7 +4,7 @@ import newsData from "@/content/news.json"
 import researchData from "@/content/research.json"
 import membersData from "@/content/members.json"
 import publicationsData from "@/content/publications.json"
-import labActivitiesData from "@/content/lab-activities.json"
+import labActivitiesData from "@/content/blog.json"
 
 export function getNews(): NewsItem[] {
   return (newsData as NewsItem[]).sort(
@@ -33,11 +33,20 @@ export function getPublications(): Publication[] {
 }
 
 export function getLabActivities(): LabActivityItem[] {
-  return (labActivitiesData as LabActivityItem[]).sort(
+  return (labActivitiesData as unknown as LabActivityItem[]).sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
 }
 
 export function getLabActivityBySlug(slug: string): LabActivityItem | undefined {
-  return (labActivitiesData as LabActivityItem[]).find((n) => n.slug === slug)
+  return (labActivitiesData as unknown as LabActivityItem[]).find((n) => n.slug === slug)
+}
+
+// Backwards-compatible wrappers named for "blog"
+export function getBlogPosts(): LabActivityItem[] {
+  return getLabActivities()
+}
+
+export function getBlogPostBySlug(slug: string): LabActivityItem | undefined {
+  return getLabActivityBySlug(slug)
 }

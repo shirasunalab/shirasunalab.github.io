@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/lab-activity", label: "Lab Activity" },
+  { href: "/blog", label: "Blog" },
   { href: "/news", label: "News" },
   { href: "/research", label: "Research" },
   { href: "/members", label: "Members" },
-  { href: "/publications", label: "Publications" },
+  { href: "https://sites.google.com/view/masaru-shirasuna/home/publications-works?authuser=0", label: "Publications" },
   { href: "/join", label: "Join Us" },
   { href: "/access", label: "Access" },
 ]

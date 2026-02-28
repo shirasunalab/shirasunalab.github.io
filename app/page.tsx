@@ -74,7 +74,7 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-muted-foreground">注目の業績</p>
             </div>
             <Link
-              href="/publications"
+              href="https://sites.google.com/view/masaru-shirasuna/home/publications-works?authuser=0"
               className="flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
             >
               View all <ArrowRight className="h-4 w-4" />
