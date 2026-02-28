@@ -54,10 +54,6 @@ export function HeroSection() {
                 <Sparkles className="h-4 w-4 text-accent" />
                 <span className="text-xs font-medium text-muted-foreground uppercase">Latest</span>
               </div>
-              <p className="mt-2 text-sm font-medium leading-snug text-foreground">
-                CogSci 2025 にて2件の発表を予定
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">San Francisco, July 2025</p>
             </div>
             <div className="rounded-lg border border-border bg-background p-5">
               <p className="text-xs font-medium text-muted-foreground uppercase">
