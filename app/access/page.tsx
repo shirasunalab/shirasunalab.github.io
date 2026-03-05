@@ -46,7 +46,7 @@ export default function AccessPage() {
               <p>〒432-8011</p>
               <p>静岡県浜松市中央区城北3-5-1</p>
               <p>静岡大学 浜松キャンパス 情報学部2号館4階</p> 
-              <p>教員室：J2431, 学生室：J2433</p>
+              <p>教員室:J2431,  学生室:J2433</p>
               <p className="mt-2">情報学部 行動情報学科</p>
             </div>
             <div className="mt-4 text-sm leading-relaxed text-muted-foreground">

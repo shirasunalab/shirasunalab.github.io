@@ -22,6 +22,7 @@ export function SiteFooter() {
               {[
                 { href: "/news", label: "News" },
                 { href: "/research", label: "Research" },
+                { href: "/sentan", label: "Sentan" },
                 { href: "/members", label: "Members" },
                 { href: "https://sites.google.com/view/masaru-shirasuna/home/publications-works?authuser=0", label: "Publications" },
                 { href: "/join", label: "Join Us" },
