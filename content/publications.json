@@ -1,5 +1,41 @@
 [
   {
+    "year": 2025,
+    "type": "journal",
+    "highlight": true,
+    "title": "Pause before action: Waiting short time as a simple and resource-rational boost",
+    "authors": "Shirasuna, M., Kagawa, R., & Honda, H.",
+    "venue": "Scientific Reports, 15, 4362",
+    "doi": "https://doi.org/10.1038/s41598-025-87119-z",
+    "url": null,
+    "pdf": null,
+    "bibtex": "@article{shirasuna2025pause,\n  title={Pause before action: Waiting short time as a simple and resource-rational boost},\n  author={Shirasuna, M. and Kagawa, R. and Honda, H.},\n  journal={Scientific Reports},\n  volume={15},\n  pages={4362},\n  year={2025},\n  doi={10.1038/s41598-025-87119-z}\n}"
+  },
+  {
+    "year": 2023,
+    "type": "journal",
+    "highlight": true,
+    "title": "Can individual subjective confidence in training questions predict group performance in test questions?",
+    "authors": "Shirasuna, M., & Honda, H.",
+    "venue": "PLOS ONE, 18(3): e0280984",
+    "doi": "https://doi.org/10.1371/journal.pone.0280984",
+    "url": null,
+    "pdf": null,
+    "bibtex": "@article{shirasuna2023confidence,\n  title={Can individual subjective confidence in training questions predict group performance in test questions?},\n  author={Shirasuna, M. and Honda, H.},\n  journal={PLOS ONE},\n  volume={18},\n  number={3},\n  pages={e0280984},\n  year={2023},\n  doi={10.1371/journal.pone.0280984}\n}"
+  },
+  {
+    "year": 2020,
+    "type": "journal",
+    "highlight": true,
+    "title": "Familiarity-matching: An ecologically rational heuristic for the relationships-comparison task",
+    "authors": "Shirasuna, M., Honda, H., Matsuka, T., & Ueda, K.",
+    "venue": "Cognitive Science, 44(2): e12806",
+    "doi": "https://doi.org/10.1111/cogs.12806",
+    "url": null,
+    "pdf": null,
+    "bibtex": "@article{shirasuna2020familiarity,\n  title={Familiarity-matching: An ecologically rational heuristic for the relationships-comparison task},\n  author={Shirasuna, M. and Honda, H. and Matsuka, T. and Ueda, K.},\n  journal={Cognitive Science},\n  volume={44},\n  number={2},\n  pages={e12806},\n  year={2020},\n  doi={10.1111/cogs.12806}\n}"
+  },
+  {
     "year": 2024,
     "type": "journal",
     "title": "早押しクイズに見る不確実性下の判断：クイズ大会の行動データに基づく事例研究",

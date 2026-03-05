@@ -1,0 +1,17 @@
+{
+  // Ignore unknown at-rules (Tailwind/PostCSS directives) in VS Code CSS linter
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+
+  // Enable Tailwind CSS extension features if installed
+  "tailwindCSS.validate": true,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascript",
+    "typescriptreact": "typescript",
+    "html": "html",
+    "css": "css"
+  }
+}

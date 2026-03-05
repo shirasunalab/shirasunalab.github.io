@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-// Image removed per request (concept diagram deleted)
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -17,7 +16,8 @@ export default function SentanPage() {
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
           先端情報学実習プロジェクト
           「実世界と数理世界を結ぶモデリングとシミュレーション」
-          （通称：シミュレーション・プロジェクト）の紹介ページです。
+          （通称:シミュプロ, 主催:森田純哉先生）の紹介ページです。
+          白砂研究室では、教員ごとに複数あるプロジェクトのうちの一つとして活動を行っています。
           2年生から、実践的な研究プロセスに触れられることが特徴です。
         </p>
       </div>

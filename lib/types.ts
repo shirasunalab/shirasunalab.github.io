@@ -52,4 +52,5 @@ export interface Publication {
   url: string | null
   pdf: string | null
   bibtex: string | null
+  highlight?: boolean
 }

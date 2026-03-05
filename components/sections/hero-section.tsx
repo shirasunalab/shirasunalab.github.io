@@ -1,6 +1,18 @@
 import { Brain, Sparkles } from "lucide-react"
+import Link from "next/link"
+import { getNews, getLabActivities } from "@/lib/content"
 
 export function HeroSection() {
+  const news = getNews()
+  const blog = getLabActivities()
+
+  const combined = [
+    ...news.map((n) => ({ type: "news" as const, slug: n.slug, title: n.title, date: n.date })),
+    ...blog.map((b) => ({ type: "blog" as const, slug: b.slug, title: b.title, date: b.date })),
+  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+  const latest = combined.slice(0, 1)
+
   return (
     <section className="relative overflow-hidden border-b border-border bg-card py-20 md:py-28">
       {/* Subtle decorative element */}
@@ -50,10 +62,30 @@ export function HeroSection() {
 
           <div className="flex shrink-0 flex-col gap-4 md:w-72">
             <div className="rounded-lg border border-border bg-background p-5">
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-accent" />
-                <span className="text-xs font-medium text-muted-foreground uppercase">Latest</span>
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-accent" />
+                  <span className="text-xs font-medium text-muted-foreground uppercase">Latest</span>
+                </div>
+                <Link href="/news" className="text-xs text-muted-foreground hover:underline">View all</Link>
               </div>
+
+              <ul className="mt-3 space-y-3">
+                {latest.map((it) => (
+                  <li key={`${it.type}-${it.slug}`}>
+                    <Link
+                      href={it.type === "news" ? `/news/${it.slug}` : `/blog/${it.slug}`}
+                      className="block rounded-sm px-1 py-0.5 hover:bg-muted/30"
+                    >
+                      <div className="text-xs text-muted-foreground">{new Date(it.date).toLocaleDateString()}</div>
+                      <div className="mt-0.5 text-sm font-medium text-foreground">{it.title}</div>
+                    </Link>
+                  </li>
+                ))}
+                {latest.length === 0 && (
+                  <li className="text-sm text-muted-foreground">最新の更新はありません。</li>
+                )}
+              </ul>
             </div>
             <div className="rounded-lg border border-border bg-background p-5">
               <p className="text-xs font-medium text-muted-foreground uppercase">

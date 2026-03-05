@@ -9,7 +9,7 @@ import { PublicationRow } from "@/components/sections/publication-row"
 export default function HomePage() {
   const news = getNews().filter((n) => n.pinned).slice(0, 3)
   const research = getResearch()
-  const publications = getPublications().slice(0, 3)
+  const publications = getPublications().filter((p) => p.highlight).slice(0, 3)
 
   return (
     <div>
