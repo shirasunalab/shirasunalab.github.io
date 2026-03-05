@@ -63,6 +63,19 @@ export default async function BlogDetailPage({
         </div>
 
         <div className="mt-8 text-sm leading-relaxed text-foreground">
+          {item.images && item.images.length > 0 && (
+            <div className="mb-6 flex flex-col gap-4">
+              {item.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img.src}
+                  alt={img.alt ?? item.title}
+                  className="w-full rounded-md"
+                />
+              ))}
+            </div>
+          )}
+
           {item.body.split("\n\n").map((paragraph, i) => (
             <p key={i} className="mt-4 first:mt-0">
               {paragraph.split("**").map((part, j) =>

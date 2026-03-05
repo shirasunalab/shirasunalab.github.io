@@ -25,6 +25,7 @@ export interface LabActivityItem {
   summary: string
   links: { label: string; url: string }[]
   body: string
+  images?: { src: string; alt?: string }[]
 }
 
 export interface Member {
