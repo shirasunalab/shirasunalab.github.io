@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Image from "next/image"
+// Image removed per request (concept diagram deleted)
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -51,8 +51,8 @@ export default function SentanPage() {
       </section>
 
       <section className="mt-10 rounded-lg border border-border bg-card p-6 md:p-8">
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <div className="max-w-2xl">
+        <div className="flex flex-col gap-4">
+          <div className="max-w-3xl">
             <h2 className="text-xl font-bold tracking-tight text-foreground">進め方（イメージ）</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               実世界の観測（実験）と、コンピュータ上のモデル（形式表現）を
@@ -66,22 +66,6 @@ export default function SentanPage() {
               <li>5. 改善：不一致の理由を考え、モデルや実験設計を更新</li>
             </ol>
           </div>
-
-          <figure className="w-full md:w-[360px]">
-            <div className="overflow-hidden rounded-lg border border-border bg-background">
-              <Image
-                src="/sentan/simulation-diagram.svg"
-                alt="人間の精神と行動のシミュレーション：実験とモデルの対応の概念図"
-                width={900}
-                height={450}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-            <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              添付画像を参考にした概念図（差し替える場合：public/sentan/ 以下に配置）
-            </figcaption>
-          </figure>
         </div>
       </section>
 
