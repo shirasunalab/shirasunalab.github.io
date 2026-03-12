@@ -5,7 +5,7 @@ import type { NewsItem } from "@/lib/types"
 export function NewsCard({ item }: { item: NewsItem }) {
   return (
     <Link
-      href={`/news/${item.slug}`}
+      href={`/blog-news/${item.slug}`}
       className="group flex flex-col rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/30 hover:bg-secondary/50"
     >
       <div className="flex items-center gap-2">

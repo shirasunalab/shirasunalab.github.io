@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 import { getBlogNews } from "@/lib/content"
-import { BlogNewsListClient } from "@/app/blog-news/blog-news-list-client"
+import { BlogNewsListClient } from "./blog-news-list-client"
 
 export const metadata: Metadata = {
-  title: "News",
-  description: "白砂研究室のお知らせ・最新ニュース。論文掲載、学会発表、受賞などの情報を掲載しています。",
+  title: "Blog＆News",
+  description: "研究室の活動記録（Blog）とお知らせ（News）をまとめて掲載します。",
 }
 
-export default function NewsPage() {
+export default function BlogNewsPage() {
   const items = getBlogNews()
 
   return (

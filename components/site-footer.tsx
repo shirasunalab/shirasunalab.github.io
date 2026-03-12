@@ -20,7 +20,7 @@ export function SiteFooter() {
             <h3 className="text-sm font-bold text-foreground">Links</h3>
             <ul className="mt-2 flex flex-col gap-1.5">
               {[
-                { href: "/news", label: "News" },
+                { href: "/blog-news", label: "Blog＆News" },
                 { href: "/research", label: "Research" },
                 { href: "/sentan", label: "Sentan" },
                 { href: "/members", label: "Members" },

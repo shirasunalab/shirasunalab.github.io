@@ -54,3 +54,16 @@ export interface Publication {
   bibtex: string | null
   highlight?: boolean
 }
+
+export interface BlogNewsItem {
+  kind: "news" | "blog"
+  slug: string
+  title: string
+  date: string
+  tags: string[]
+  summary: string
+  links: { label: string; url: string }[]
+  pinned: boolean
+  body: string
+  images?: { src: string; alt?: string }[]
+}

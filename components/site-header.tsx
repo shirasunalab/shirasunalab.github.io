@@ -8,8 +8,7 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
-  { href: "/news", label: "News" },
+  { href: "/blog-news", label: "Blog＆News" },
   { href: "/research", label: "Research" },
   { href: "/sentan", label: "Sentan" },
   { href: "/members", label: "Members" },
@@ -17,6 +16,21 @@ const navItems = [
   { href: "/join", label: "Join Us" },
   { href: "/access", label: "Access" },
 ]
+
+function isActiveNavItem(pathname: string, href: string) {
+  if (pathname === href) return true
+  if (href === "/") return pathname === "/"
+
+  if (href === "/blog-news") {
+    return (
+      pathname.startsWith("/blog-news") ||
+      pathname.startsWith("/blog") ||
+      pathname.startsWith("/news")
+    )
+  }
+
+  return pathname.startsWith(href)
+}
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -42,7 +56,7 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
+                isActiveNavItem(pathname, item.href)
                   ? "bg-secondary text-secondary-foreground"
                   : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground"
               )}
@@ -73,7 +87,7 @@ export function SiteHeader() {
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "rounded-md px-3 py-2.5 text-sm font-medium transition-colors",
-                  pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
+                  isActiveNavItem(pathname, item.href)
                     ? "bg-secondary text-secondary-foreground"
                     : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground"
                 )}

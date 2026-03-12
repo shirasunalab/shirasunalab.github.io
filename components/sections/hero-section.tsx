@@ -1,16 +1,9 @@
 import { Brain, Sparkles } from "lucide-react"
 import Link from "next/link"
-import { getNews, getLabActivities } from "@/lib/content"
+import { getBlogNews } from "@/lib/content"
 
 export function HeroSection() {
-  const news = getNews()
-  const blog = getLabActivities()
-
-  const combined = [
-    ...news.map((n) => ({ type: "news" as const, slug: n.slug, title: n.title, date: n.date })),
-    ...blog.map((b) => ({ type: "blog" as const, slug: b.slug, title: b.title, date: b.date })),
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-
+  const combined = getBlogNews()
   const latest = combined.slice(0, 1)
 
   return (
@@ -67,14 +60,14 @@ export function HeroSection() {
                   <Sparkles className="h-4 w-4 text-accent" />
                   <span className="text-xs font-medium text-muted-foreground uppercase">Latest</span>
                 </div>
-                <Link href="/news" className="text-xs text-muted-foreground hover:underline">View all</Link>
+                <Link href="/blog-news" className="text-xs text-muted-foreground hover:underline">View all</Link>
               </div>
 
               <ul className="mt-3 space-y-3">
                 {latest.map((it) => (
-                  <li key={`${it.type}-${it.slug}`}>
+                  <li key={`${it.kind}-${it.slug}`}>
                     <Link
-                      href={it.type === "news" ? `/news/${it.slug}` : `/blog/${it.slug}`}
+                      href={`/blog-news/${it.slug}`}
                       className="block rounded-sm px-1 py-0.5 hover:bg-muted/30"
                     >
                       <div className="text-xs text-muted-foreground">{new Date(it.date).toLocaleDateString()}</div>

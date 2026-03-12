@@ -1,13 +1,15 @@
 import Link from "next/link"
 import { ArrowRight, Brain, Users, Lightbulb } from "lucide-react"
-import { getNews, getResearch, getPublications } from "@/lib/content"
+import { getBlogNews, getResearch, getPublications } from "@/lib/content"
 import { HeroSection } from "@/components/sections/hero-section"
 import { NewsCard } from "@/components/sections/news-card"
 import { ResearchCard } from "@/components/sections/research-card"
 import { PublicationRow } from "@/components/sections/publication-row"
 
 export default function HomePage() {
-  const news = getNews().filter((n) => n.pinned).slice(0, 3)
+  const blogNewsAll = getBlogNews()
+  const pinned = blogNewsAll.filter((n) => n.pinned)
+  const blogNews = [...pinned, ...blogNewsAll.filter((n) => !pinned.some((p) => p.slug === n.slug))].slice(0, 3)
   const research = getResearch()
   const publications = getPublications().filter((p) => p.highlight).slice(0, 3)
 
@@ -15,24 +17,24 @@ export default function HomePage() {
     <div>
       <HeroSection />
 
-      {/* News Section */}
+      {/* Blog & News Section */}
       <section className="border-b border-border py-16">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <div className="flex items-end justify-between">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-foreground">News</h2>
-              <p className="mt-1 text-sm text-muted-foreground">お知らせ・最新情報</p>
+              <h2 className="text-2xl font-bold tracking-tight text-foreground">Blog＆News</h2>
+              <p className="mt-1 text-sm text-muted-foreground">活動記録・お知らせ</p>
             </div>
             <Link
-              href="/news"
+              href="/blog-news"
               className="flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
             >
               View all <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {news.map((item) => (
-              <NewsCard key={item.slug} item={item} />
+            {blogNews.map((item) => (
+              <NewsCard key={`${item.kind}-${item.slug}`} item={item} />
             ))}
           </div>
         </div>
