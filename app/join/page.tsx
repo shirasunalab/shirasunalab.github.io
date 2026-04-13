@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Join Us",
   description:
     "白砂研究室への配属・参加方法。研究室の概要、応募フロー、FAQ、スケジュールをご確認ください。",
+  alternates: {
+    canonical: "/join",
+  },
 }
 
 export default function JoinPage() {

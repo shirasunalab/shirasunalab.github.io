@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Sentan",
   description:
     "先端情報学実習（sentan）『実世界と数理世界を結ぶモデリングとシミュレーション』—通称シミュレーション・プロジェクトの紹介ページです。",
+  alternates: {
+    canonical: "/sentan",
+  },
 }
 
 export default function SentanPage() {

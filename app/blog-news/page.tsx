@@ -5,6 +5,9 @@ import { BlogNewsListClient } from "./blog-news-list-client"
 export const metadata: Metadata = {
   title: "Blog＆News",
   description: "研究室の活動記録（Blog）とお知らせ（News）をまとめて掲載します。",
+  alternates: {
+    canonical: "/blog-news",
+  },
 }
 
 export default function BlogNewsPage() {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Members",
   description:
     "白砂研究室のメンバー紹介。教員、大学院生、共同研究者の一覧です。現在実装作業中です。",
+  alternates: {
+    canonical: "/members",
+  },
 }
 
 export default function MembersPage() {

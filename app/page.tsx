@@ -5,6 +5,13 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { NewsCard } from "@/components/sections/news-card"
 import { ResearchCard } from "@/components/sections/research-card"
 import { PublicationRow } from "@/components/sections/publication-row"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+}
 
 export default function HomePage() {
   const blogNewsAll = getBlogNews()

@@ -6,6 +6,9 @@ import { getResearch } from "@/lib/content"
 export const metadata: Metadata = {
   title: "Research",
   description: "白砂研究室の研究テーマ。人の知性の解明、バイアスの先にあるもの、AI×ヒューマン協働システムについて研究しています。",
+  alternates: {
+    canonical: "/research",
+  },
 }
 
 const icons = [Brain, Lightbulb, Users]

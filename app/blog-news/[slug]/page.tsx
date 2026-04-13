@@ -20,6 +20,23 @@ export async function generateMetadata({
   return {
     title: item.title,
     description: item.summary,
+    keywords: item.tags,
+    alternates: {
+      canonical: `/blog-news/${item.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: item.title,
+      description: item.summary,
+      url: `/blog-news/${item.slug}`,
+      publishedTime: new Date(item.date).toISOString(),
+      tags: item.tags,
+    },
+    twitter: {
+      card: "summary",
+      title: item.title,
+      description: item.summary,
+    },
   }
 }
 
@@ -31,6 +48,8 @@ export default async function BlogNewsDetailPage({
   const { slug } = await params
   const item = getBlogNewsBySlug(slug)
   if (!item) notFound()
+
+  const images = (item.images ?? []).filter((img) => (img.src ?? "").trim().length > 0)
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 lg:px-6">
@@ -63,14 +82,16 @@ export default async function BlogNewsDetailPage({
         </div>
 
         <div className="mt-8 text-sm leading-relaxed text-foreground">
-          {item.images && item.images.length > 0 && (
+          {images.length > 0 && (
             <div className="mb-6 flex flex-col gap-4">
-              {item.images.map((img, idx) => (
+              {images.map((img, idx) => (
                 <img
                   key={idx}
                   src={img.src}
                   alt={img.alt ?? item.title}
                   className="w-full rounded-md"
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
             </div>

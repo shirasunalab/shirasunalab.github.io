@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Access",
   description:
     "白砂研究室（静岡大学浜松キャンパス）へのアクセス方法。住所、交通手段、地図をご確認ください。",
+  alternates: {
+    canonical: "/access",
+  },
 }
 
 export default function AccessPage() {
