@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
   description:
     "静岡大学情報学部行動情報学科 白砂研究室。認知科学・意思決定科学の視点から「人の知性」の本質を解明する研究を行っています。Cognitive Science and Decision Science Laboratory at Shizuoka University.",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
