@@ -47,12 +47,12 @@ export function SiteHeader() {
           onClick={() => setMobileOpen(false)}
           aria-label="Shirasuna Lab ホーム"
         >
-          <div className="relative h-9 w-9 shrink-0 overflow-hidden">
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden lg:h-14 lg:w-14">
             <Image
               src="/logo.png"
               alt="白砂研究室 ロゴ"
               fill
-              sizes="100px"
+              sizes="52px"
               priority
               className="object-cover object-[50%_25%]"
             />
