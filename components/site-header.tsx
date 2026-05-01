@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -47,10 +48,10 @@ export function SiteHeader() {
           aria-label="Shirasuna Lab ホーム"
         >
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="白砂研究室 ロゴ"
-            width={36}
-            height={36}
+            width={80}
+            height={80}
             priority
             className="h-9 w-9"
           />
@@ -82,14 +83,18 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="rounded-md p-2 text-muted-foreground hover:bg-secondary md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+
+          {/* Mobile toggle */}
+          <button
+            className="rounded-md p-2 text-muted-foreground hover:bg-secondary md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
