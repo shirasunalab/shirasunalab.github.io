@@ -47,7 +47,7 @@ export function SiteHeader() {
           aria-label="Shirasuna Lab ホーム"
         >
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="白砂研究室 ロゴ"
             width={36}
             height={36}
