@@ -52,7 +52,7 @@ export function SiteHeader() {
               src="/logo.png"
               alt="白砂研究室 ロゴ"
               fill
-              sizes="36px"
+              sizes="100px"
               priority
               className="object-cover object-[50%_25%]"
             />
