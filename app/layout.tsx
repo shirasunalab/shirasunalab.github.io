@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { JsonLd } from "@/components/json-ld"
+import { ThemeProvider } from "@/components/theme-provider"
 import { getSiteUrl } from "@/lib/site"
 import "./globals.css"
 
@@ -91,16 +92,28 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="ja" className={`${notoSansJP.variable} ${inter.variable}`}>
+    <html
+      lang="ja"
+      className={`${notoSansJP.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans antialiased">
-        <div className="flex min-h-svh flex-col">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
-        <JsonLd data={websiteJsonLd} />
-        <JsonLd data={orgJsonLd} />
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          enableColorScheme
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-svh flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </div>
+          <JsonLd data={websiteJsonLd} />
+          <JsonLd data={orgJsonLd} />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
