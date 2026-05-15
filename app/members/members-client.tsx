@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react"
 import { Mail, ExternalLink, User } from "lucide-react"
 import type { Member } from "@/lib/types"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const categoryLabels: Record<string, string> = {
   PI: "Principal Investigator",
@@ -97,9 +98,14 @@ export function MembersClient({ members }: { members: Member[] }) {
 function MemberCard({ member }: { member: Member }) {
   return (
     <div className="flex gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/20">
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-secondary">
-        <User className="h-6 w-6 text-muted-foreground" />
-      </div>
+      <Avatar className="h-14 w-14 shrink-0">
+        {member.photo ? (
+          <AvatarImage src={member.photo} alt={member.name} />
+        ) : null}
+        <AvatarFallback className="bg-secondary">
+          <User className="h-6 w-6 text-muted-foreground" />
+        </AvatarFallback>
+      </Avatar>
       <div className="flex-1">
         <div className="flex flex-wrap items-baseline gap-2">
           <h3 className="text-sm font-bold text-foreground">{member.name}</h3>
