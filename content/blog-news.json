@@ -6,7 +6,7 @@
     "date": "2026-02-28",
     "tags": ["その他", "お知らせ"],
     "summary": "研究室HPを公開しました。",
-    "links": [],
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1016/j.chbah.2026.100314" }],
     "pinned": false,
     "images": [{ "src": "", "alt": "" }],
     "body": "2月28日に研究室HPを公開しました。\\n\\nこれから順次実装を進めていきます。"
@@ -74,12 +74,12 @@
   {
     "kind": "news",
     
-    "slug": "2026-05-14",
+    "slug": "2026-05-13",
     "title": "論文投稿！",
-    "date": "2026-05-14",
+    "date": "2026-05-13",
     "tags": ["お知らせ"],
     "summary": "先生の論文が掲載されました！",
-    "links": ["https://www.sciencedirect.com/science/article/pii/S2949882126000654"],
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1016/j.chbah.2026.100314" }],
     "pinned": true,
     "images": [{ "src": "", "alt": "" }],
     "body":  "  先日publishされた論文が、日本認知心理学会の「国際ジャーナル掲載情報」ページに掲載されました。\n\n先生、おめでとうございます！"
