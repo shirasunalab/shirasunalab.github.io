@@ -1,5 +1,18 @@
 [
   {
+    "year": 2026,
+    "type": "journal",
+    "highlight": true,
+    "title": "Dilemma between bias interaction and trustworthy AI in human–AI collaborated judgments",
+    "authors": "Shirasuna, M., Honda, H., & Kagawa, R.",
+    "venue": "Computers in Human Behavior: Artificial Humans, 8, 100314",
+    "doi": "https://doi.org/10.1016/j.chbah.2026.100314",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2949882126000654",
+    "pdf": null,
+    "bibtex": "@article{shirasuna2026dilemma,\n  title={Dilemma between bias interaction and trustworthy AI in human--AI collaborated judgments},\n  author={Shirasuna, Masaru and Honda, Hidehito and Kagawa, Rina},\n  journal={Computers in Human Behavior: Artificial Humans},\n  volume={8},\n  pages={100314},\n  year={2026},\n  doi={10.1016/j.chbah.2026.100314}\n}"
+  },
+  
+  {
     "year": 2025,
     "type": "journal",
     "highlight": true,

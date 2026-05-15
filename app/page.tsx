@@ -18,7 +18,9 @@ export default function HomePage() {
   const pinned = blogNewsAll.filter((n) => n.pinned)
   const blogNews = [...pinned, ...blogNewsAll.filter((n) => !pinned.some((p) => p.slug === n.slug))].slice(0, 3)
   const research = getResearch()
-  const publications = getPublications().filter((p) => p.highlight).slice(0, 3)
+  const featuredPublicationsCount = 5
+  const publications = getPublications().filter((p) => p.highlight).slice(0, featuredPublicationsCount)
+  const publicationPlaceholdersCount = Math.max(0, featuredPublicationsCount - publications.length)
 
   return (
     <div>
@@ -92,6 +94,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-col gap-3">
             {publications.map((pub, i) => (
               <PublicationRow key={i} publication={pub} />
+            ))}
+            {Array.from({ length: publicationPlaceholdersCount }).map((_, i) => (
+              <div
+                key={`publication-placeholder-${i}`}
+                aria-hidden="true"
+                className="rounded-lg border border-border bg-card p-4"
+              />
             ))}
           </div>
         </div>
