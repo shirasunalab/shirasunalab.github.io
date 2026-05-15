@@ -98,12 +98,16 @@ export function MembersClient({ members }: { members: Member[] }) {
 function MemberCard({ member }: { member: Member }) {
   return (
     <div className="flex gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/20">
-      <Avatar className="h-14 w-14 shrink-0">
+      <Avatar className="h-20 w-20 shrink-0">
         {member.photo ? (
-          <AvatarImage src={member.photo} alt={member.name} />
+          <AvatarImage
+            src={member.photo}
+            alt={member.name}
+            className="object-cover object-center"
+          />
         ) : null}
         <AvatarFallback className="bg-secondary">
-          <User className="h-6 w-6 text-muted-foreground" />
+          <User className="h-8 w-8 text-muted-foreground" />
         </AvatarFallback>
       </Avatar>
       <div className="flex-1">
