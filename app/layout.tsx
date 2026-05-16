@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { JsonLd } from "@/components/json-ld"
 import { ThemeProvider } from "@/components/theme-provider"
+import { DisableImageContextMenu } from "@/components/disable-image-context-menu"
 import { getSiteUrl } from "@/lib/site"
 import "./globals.css"
 
@@ -110,6 +111,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <SiteFooter />
           </div>
+          <DisableImageContextMenu />
           <JsonLd data={websiteJsonLd} />
           <JsonLd data={orgJsonLd} />
           <Analytics />
