@@ -109,6 +109,19 @@
     "pinned": true,
     "images": [{ "src": "/images/blog-news/aubergine.jpg", "alt": "" }],
     "body":  "研究室に仲間が増えました。といっても人ではなく、野菜のナスの苗です。\n\n研究室の中で育てています。これからどんな実がなるのか楽しみです！"
-  }    
+  } ,
+       {
+    "kind": "blog",
+    
+    "slug": "2026-05-27",
+    "title": "研究室訪問にくる皆さんへ",
+    "date": "2026-05-27",
+    "tags": ["雑談"],
+    "summary": "ぜひお読みください！",
+    "links": [{ "label": "Click here", "url": "https://note.com/aubergine2160/n/na480c5dece05" }],
+    "pinned": true,
+    "images": [{ "src": "", "alt": "" }],
+    "body":  "中の人です。これで身バレするかもしれませんがまあ良いでしょう。\n\n私は訪問日にはいないので、来てくださる皆さんに文章でお伝えしたいと思います。\n\nもしよろしければぜひご覧ください。"
+  }   
   
 ]
