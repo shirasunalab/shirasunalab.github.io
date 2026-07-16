@@ -37,7 +37,20 @@
     "website": null,
     "photo": null,
     "bio": null
-  },  
+  }, 
+  {
+    "name": "奈須 大輝",
+    "nameEn": "Hiroki Nasu",
+    "roleCategory": "Student",
+    "title": "B4",
+    "affiliation": "静岡大学 情報学部 情報社会学科",
+    "year": 2026,
+    "interests": ["競争下における人間の判断最適点の分析", "歌詞分析・生成システム開発"],
+    "email": null,
+    "website": "https://hiroki-nasu.vercel.app/",
+    "photo": "/images/members/hiroki.jpg",
+    "bio": "野球とクイズが好きです！よろしくお願いします！"
+  },   
   {
     "name": "平河 創",
     "nameEn": "Sou Hirakawa",
@@ -51,7 +64,7 @@
     "photo": null,
     "bio": null
   },  
-    {
+  {
     "name": "山口 煌太",
     "nameEn": "Kota Yamaguchi",
     "roleCategory": "Student",
@@ -65,23 +78,49 @@
     "bio": null
   },  
   {
-    "name": "奈須 大輝",
-    "nameEn": "Hiroki Nasu",
+    "name": "大西 八雲",
+    "nameEn": "Yakumo Onishi",
     "roleCategory": "Student",
-    "title": "B4",
+    "title": "B3",
     "affiliation": "静岡大学 情報学部 情報社会学科",
     "year": 2026,
-    "interests": ["競争下における人間の判断最適点の分析", "歌詞分析・生成システム開発"],
+    "interests": ["早押しクイズにおける熟達者と非熟達者における振る舞いの分析"],
     "email": null,
-    "website": "https://hiroki-nasu.vercel.app/",
-    "photo": "/images/members/hiroki.jpg",
-    "bio": "野球とクイズが好きです！よろしくお願いします！"
+    "website": "https://yakumo-profile.vercel.app/",
+    "photo": "/images/members/yakumo.jpg",
+    "bio": "湯浅は今日もホールド"
+  },  
+  {
+    "name": "白井 咲衣",
+    "nameEn": "Sae Shirai",
+    "roleCategory": "Student",
+    "title": "B3",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
   },
+  {
+    "name": "東宮 清歌",
+    "nameEn": "Seika Toumiya",
+    "roleCategory": "Student",
+    "title": "B3",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  },  
   {
     "name": "松下 滉成",
     "nameEn": "Kosei Matsushita",
     "roleCategory": "Student",
-    "title": "B3(先端生)",
+    "title": "B3",
     "affiliation": "静岡大学 情報学部 情報科学科",
     "year": 2026,
     "interests": ["人間とAIに対する損失回避の傾向調査"],
@@ -91,16 +130,55 @@
     "bio": "アットホームな研究室だと思います！"
   },
   {
-    "name": "大西 八雲",
-    "nameEn": "Yakumo Onishi",
+    "name": "松下 来地",
+    "nameEn": "Raichi Matsushita",
     "roleCategory": "Student",
-    "title": "B3(先端生)",
+    "title": "B3",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  },
+  {
+    "name": "若林 歩友美",
+    "nameEn": "Ayumi Wakabayashi",
+    "roleCategory": "Student",
+    "title": "B3",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  },
+  {
+    "name": "鈴木 嘉将",
+    "nameEn": "Yoshimasa Suzuki",
+    "roleCategory": "Student",
+    "title": "B2(先端生)",
+    "affiliation": "静岡大学 情報学部 情報科学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  },
+  {
+    "name": "山根 百合愛",
+    "nameEn": "Yuria Yamane",
+    "roleCategory": "Student",
+    "title": "B2(先端生)",
     "affiliation": "静岡大学 情報学部 情報社会学科",
     "year": 2026,
-    "interests": ["早押しクイズにおける熟達者と非熟達者における振る舞いの分析"],
+    "interests": [""],
     "email": null,
-    "website": "https://yakumo-profile.vercel.app/",
-    "photo": "/images/members/yakumo.jpg",
-    "bio": "湯浅は今日もホールド"
+    "website": null,
+    "photo": null,
+    "bio": null
   }
 ]
