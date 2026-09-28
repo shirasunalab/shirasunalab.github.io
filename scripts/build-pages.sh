@@ -22,4 +22,4 @@ for path in middleware.ts app/api app/admin; do
   fi
 done
 
-pnpm exec next build
+pnpm exec next build --webpack
