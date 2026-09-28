@@ -36,7 +36,16 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build static site
-        run: pnpm build:pages
+        run: |
+          set -o pipefail
+          pnpm build:pages 2>&1 | tee pages-build.log
+
+      - name: Upload build diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-build-log
+          path: pages-build.log
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
