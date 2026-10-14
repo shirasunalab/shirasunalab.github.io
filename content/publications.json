@@ -11,7 +11,19 @@
     "pdf": null,
     "bibtex": "@article{shirasuna2026dilemma,\n  title={Dilemma between bias interaction and trustworthy AI in human--AI collaborated judgments},\n  author={Shirasuna, Masaru and Honda, Hidehito and Kagawa, Rina},\n  journal={Computers in Human Behavior: Artificial Humans},\n  volume={8},\n  pages={100314},\n  year={2026},\n  doi={10.1016/j.chbah.2026.100314}\n}"
   },
-  
+  {
+    "year": 2026,
+    "type": "journal",
+    "highlight": true,
+    "title": "Attempts to investigate what words trivia experts focus on in quiz questions: Human-AI comparison through “LLM-as-a-judge” approach",
+    "authors": "Shirasuna, M., & Yoshida, Y.",
+    "venue": "PLOS ONE, 21(9): e0358332",
+    "doi": "https://doi.org/10.1371/journal.pone.0358332",
+    "url": null,
+    "pdf": null,
+    "bibtex": "@article{shirasuna2026trivia,\n  title={Attempts to investigate what words trivia experts focus on in quiz questions: Human-AI comparison through {LLM-as-a-judge} approach},\n  author={Shirasuna, Masaru and Yoshida, Yuki},\n  journal={PLOS ONE},\n  volume={21},\n  number={9},\n  pages={e0358332},\n  year={2026},\n  doi={10.1371/journal.pone.0358332}\n}"
+  },
+
   {
     "year": 2025,
     "type": "journal",
