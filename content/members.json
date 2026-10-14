@@ -84,7 +84,7 @@
     "title": "B4",
     "affiliation": "静岡大学 情報学部 行動情報学科",
     "year": 2026,
-    "interests": ["AIの確信度表現と人の意思決定への影響: \n\n人が持つバイアスを考慮した検討"],
+    "interests": ["AIの確信度表現と人の意思決定への影響"],
     "email": null,
     "website": null,
     "photo": null,
@@ -101,7 +101,7 @@
     "email": null,
     "website": "https://yakumo-profile.vercel.app/",
     "photo": "/images/members/yakumo.jpg",
-    "bio": "湯浅は今日もホールド"
+    "bio": "木下は今日もホールド"
   },  
   {
     "name": "白井 咲衣",
@@ -182,6 +182,19 @@
     "bio": null
   },
   {
+    "name": "瀬古 英志",
+    "nameEn": "Eishi Seko",
+    "roleCategory": "Student",
+    "title": "B2(先端生)",
+    "affiliation": "静岡大学 情報学部 行動情報学科",
+    "year": 2026,
+    "interests": [""],
+    "email": null,
+    "website": null,
+    "photo": null,
+    "bio": null
+  },
+    {
     "name": "山根 百合愛",
     "nameEn": "Yuria Yamane",
     "roleCategory": "Student",
