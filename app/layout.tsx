@@ -52,17 +52,23 @@ export const metadata: Metadata = {
       {
         url: "/icon-light-32x32.png",
         media: "(prefers-color-scheme: light)",
+        type: "image/png",
+        sizes: "768x768",
       },
       {
         url: "/icon-dark-32x32.png",
         media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        type: "image/png",
+        sizes: "768x768",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: [
+      {
+        url: "/apple-icon.png",
+        type: "image/png",
+        sizes: "768x768",
+      },
+    ],
   },
 }
 
