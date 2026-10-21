@@ -1,18 +1,16 @@
 import type { BlogNewsItem, NewsItem, ResearchItem, Member, Publication, LabActivityItem } from "@/lib/types"
+import { loadBlogNewsPosts } from "@/lib/load-posts"
 
-import blogNewsData from "@/content/blog-news.json"
 import researchData from "@/content/research.json"
 import membersData from "@/content/members.json"
 import publicationsData from "@/content/publications.json"
 
 function getBlogNewsData(): BlogNewsItem[] {
-  return blogNewsData as BlogNewsItem[]
+  return loadBlogNewsPosts()
 }
 
 export function getNews(): NewsItem[] {
-  return getBlogNewsData()
-    .filter((n) => n.kind === "news")
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) as unknown as NewsItem[]
+  return getBlogNews().filter((n) => n.kind === "news") as unknown as NewsItem[]
 }
 
 export function getNewsBySlug(slug: string): NewsItem | undefined {
@@ -36,9 +34,7 @@ export function getPublications(): Publication[] {
 }
 
 export function getLabActivities(): LabActivityItem[] {
-  return getBlogNewsData()
-    .filter((n) => n.kind === "blog")
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) as unknown as LabActivityItem[]
+  return getBlogNews().filter((n) => n.kind === "blog") as unknown as LabActivityItem[]
 }
 
 export function getLabActivityBySlug(slug: string): LabActivityItem | undefined {
@@ -55,9 +51,13 @@ export function getBlogPostBySlug(slug: string): LabActivityItem | undefined {
 }
 
 export function getBlogNews(): BlogNewsItem[] {
-  return getBlogNewsData().sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  return getBlogNewsData().slice().sort((a, b) => {
+    const byDate = new Date(b.date).getTime() - new Date(a.date).getTime()
+    if (byDate !== 0) return byDate
+    if (a.slug < b.slug) return -1
+    if (a.slug > b.slug) return 1
+    return 0
+  })
 }
 
 export function getBlogNewsBySlug(slug: string): BlogNewsItem | undefined {
