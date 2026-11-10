@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next"
 import { Noto_Sans_JP, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { JsonLd } from "@/components/json-ld"
@@ -130,7 +129,6 @@ export default function RootLayout({
           <DisableImageContextMenu />
           <JsonLd data={websiteJsonLd} />
           <JsonLd data={orgJsonLd} />
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
