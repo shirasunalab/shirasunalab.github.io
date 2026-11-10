@@ -31,6 +31,17 @@ powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
 pnpm dev
 ```
 
+`pnpm dev` と GitHub Pages 用のビルドでは、`content/blog-news.json` を
+`content/blog` と `content/news` の Markdown ファイルへ自動変換してから起動・ビルドします。
+記事を追加・編集したときに手動で変換する場合は、次を実行してください。
+
+```
+pnpm generate:blog-news
+```
+
+記事の入力元は `content/blog-news.json` です。生成された Markdown ファイルを直接編集しても、
+次回の変換時にJSONの内容で上書きされます。
+
 4. メモ
 
 - エディタは `.nvmrc` を参照するので、使用する Node バージョンを合わせてください。
@@ -45,4 +56,3 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\show-env.ps1
 ```
 
 このスクリプトはアクティブな Python 仮想環境（`VIRTUAL_ENV`、Conda）を検出し、Python のバージョンとプレフィックスを表示します。`.venv` や `venv` ディレクトリがあればアクティベート方法も案内します。
-

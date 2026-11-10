@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm generate:blog-news && next dev",
+    "build": "pnpm generate:blog-news && next build",
     "build:pages": "bash scripts/build-pages.sh",
+    "generate:blog-news": "node scripts/generate-blog-news.mjs",
     "start": "next start",
     "lint": "eslint ."
   },

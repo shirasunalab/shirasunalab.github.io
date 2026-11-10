@@ -15,6 +15,8 @@ restore_server_files() {
 
 trap restore_server_files EXIT
 
+pnpm generate:blog-news
+
 for path in middleware.ts app/api app/admin; do
   if [ -e "$path" ]; then
     mkdir -p "$backup_dir/$(dirname "$path")"
